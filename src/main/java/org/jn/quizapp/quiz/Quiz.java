@@ -6,7 +6,8 @@ import java.util.List;
 
 public class Quiz {
 	@Id
-	public long id;
+	public String id;
+	public String category;
 	public String question;
 	public String imageRef;
 	public List<String> choices;
@@ -16,20 +17,28 @@ public class Quiz {
 		
 	}
 
-	public Quiz(long id, String question, String imageRef, List<String> choices, int correctAnswer) {
-		this.id = id;
+	public Quiz(String category, String question, String imageRef, List<String> choices, int correctAnswer) {
+		this.category = category;
 		this.question = question;
 		this.imageRef = imageRef;
 		this.choices = choices;
 		this.correctAnswer = correctAnswer;
 	}
 
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getQuestion() {
