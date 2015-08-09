@@ -44,8 +44,22 @@ public class Application implements CommandLineRunner {
     				Arrays.asList("Candy", "Your Hand", "My Hand"),
     				2
     				);
+    		Quiz quizThree = new Quiz("Chemistry", "How many electrons Helium has?", "helium.png",
+    		        Arrays.asList("two", "four", "six"),
+    		        0);
+    		Quiz quizFour = new Quiz("Chemistry", "What kind of radiation is emitted by Polonium?", "radcircle.gif",
+    		        Arrays.asList("alpha", "beta", "gamma"),
+    		        0);
+    		Quiz quizFive = new Quiz("Chemistry", "Who invented the Periodic Table?", "",
+    		        Arrays.asList("Einstein", "Watson", "Mendelejev"),
+    		        2);
+    		
         	quizRepository.save(quizOne);
         	quizRepository.save(quizTwo);
+        	quizRepository.save(quizThree);
+        	quizRepository.save(quizFour);
+        	quizRepository.save(quizFive);
+        	
     	}
     }
     
